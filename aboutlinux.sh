@@ -8,6 +8,7 @@ echo "Total Cores  : `cat /proc/cpuinfo |grep CPU |wc -l`"
 # Show memory info
 mem=`cat /proc/meminfo | grep MemTotal | awk '{print $2}'`
 GB=`expr $mem / 1024 / 1000`
+MB=`expr $mem / 1024`
 echo "Memory       : $GB GB"
 
 # Root info
